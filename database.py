@@ -34,5 +34,8 @@ def save_order(order_id, user_id, service, game, status="PENDING"):
 def update_status(order_id, status):
     with get_conn() as conn:
         cur = conn.cursor()
-        cur.execute("UPDATE orders SET status=%s WHERE order_id=%s",(status,order_id))
+        cur.execute(
+            "UPDATE orders SET status=%s WHERE order_id=%s",
+            (status, order_id)
+        )
         conn.commit()
