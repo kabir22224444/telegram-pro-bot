@@ -1,4 +1,3 @@
-add database file
 import psycopg2, os
 from datetime import datetime
 
